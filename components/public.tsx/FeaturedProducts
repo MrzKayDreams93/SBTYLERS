@@ -1,0 +1,35 @@
+import Image from 'next/image'  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_6595-rwDm5L17v5fGwE78GXNxTqtjY3GwAb.png",
+    alt: "Modern bedroom with light wood furniture and large windows"
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_6594-IAzJJNosLpmVySdTYf7ltZaD93ldEU.png",
+    alt: "Cozy living room with autumn decor and gray sofa"
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_6596-AN4a2XcRtDbs1fBimZZ2hqUKzXjU5o.png",
+    alt: "Dining room with wooden table and chairs"
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_6597-D3hsikxOhHNw8VFp2VVvjjTP6NmZ6X.png",
+    alt: "Living room with gray reclining sofas and teal curtains"
+  }
+]
+
+export default function Home() {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+      {furnishingImages.map((image, index) => (
+        <div key={index} className="relative aspect-video">
+          <Image
+            src={image.src}
+            alt={image.alt}
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg"
+          />
+        </div>
+      ))}
+    </div>
+  )
+}
